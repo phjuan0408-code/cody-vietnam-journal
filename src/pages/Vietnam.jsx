@@ -1,0 +1,3 @@
+import { Link } from 'react-router-dom';
+import WorldMap from '../components/WorldMap.jsx';
+export default function Vietnam(){return <section className="gateway vietnam-page"><div><p className="eyebrow">A PERSONAL JOURNAL / 越南旅行紀錄</p><h1>越南，<br/>從富國島開始。</h1><p className="gateway-description">跨海纜車、香島與日落小鎮，<br/>再往北，走進動物園與珍珠樂園。</p><div className="journey-index"><Link className="journey-link" to="/phu-quoc"><span className="number">01</span><span><strong>富國島</strong><small>2026.10.07 — 10.11 / 5 DAYS</small></span><span>↗</span></Link></div></div><div className="gateway-map"><div className="map-heading"><span>越南 / VIETNAM</span><span>01 JOURNEY</span></div><WorldMap vietnam/><p className="map-caption">點選富國島，查看五日行程。</p></div></section>}

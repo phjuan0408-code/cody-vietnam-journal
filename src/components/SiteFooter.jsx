@@ -1,0 +1,2 @@
+import { ArrowUp } from "lucide-react";
+export default function SiteFooter() { return <footer className="journal-footer"><div className="footer-author"><img src="./images/author.webp" alt="Cody" loading="lazy"/><div><strong>Cody & Doreen</strong><p>地圖、照片，還有沿途的日常。</p></div></div><small>© 2026 Cody & Doreen · Travel Journal</small><button className="back-top" aria-label="回到頁首" onClick={()=>window.scrollTo({top:0,behavior:"smooth"})}><ArrowUp size={18}/></button></footer>; }

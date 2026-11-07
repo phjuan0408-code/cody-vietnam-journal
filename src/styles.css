@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html[data-travel-theme="vietnam"] {
+ --paper:#fffaf0; --ink:#164e54; --muted:#5f7371;
+ --line:#dfd9c5; --accent:#b75731;
+}
+html[data-travel-theme="vietnam"] .journal-nav {background:rgba(255,250,240,.97)}
+html[data-travel-theme="vietnam"] .gateway-map {background:var(--paper)}
+html[data-travel-theme="vietnam"] .map-heading,
+html[data-travel-theme="vietnam"] .map-caption {color:#456d6b}
+html[data-travel-theme="vietnam"] .map-caption {border-color:var(--line)}
+html[data-travel-theme="vietnam"] .atlas-vietnam path[fill="#dcded3"] {fill:#e7e4da}
+html[data-travel-theme="vietnam"] .atlas-vietnam path[fill="#267c78"] {fill:#188b89}
+html[data-travel-theme="vietnam"] .atlas-vietnam .map-target rect {fill:#fffaf0}
+html[data-travel-theme="vietnam"] .journey-link:hover {background:#f5edd9}
+.atlas svg { display:block; width:100%; height:auto; }
+.atlas { position:relative; }
+.atlas-credit { position:absolute; bottom:0; right:8px; color:#747c72; font-size:9px; }
+.map-target { cursor:pointer; }
+@media(max-width:700px){.atlas .map-target {transform:scale(1.65)}.atlas-vietnam .map-target {transform:scale(1.8)}}
+.map-target:focus-visible { outline:2px solid #253e38; }.day-pagination {display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding:28px 0;margin-top:30px;font-size:14px}
+@media(max-width:700px){.atlas-credit {font-size:7px}.nav-inner {flex-wrap:wrap;gap:14px!important}}
+:root { --paper:#faf8f3; --ink:#253e38; --muted:#6c736a; --line:#deded3; --accent:#ad4f38; --serif:"Noto Serif TC","Songti TC","PMingLiU",Georgia,serif; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:90px; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:"PingFang TC","Noto Sans TC",system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+button,a { -webkit-tap-highlight-color:transparent; }
+button { cursor:pointer; }
+a,button { touch-action:manipulation; }
+:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+h1,h2,h3 { font-family:var(--serif); }
+.journal-nav { position:sticky; top:0; z-index:50; background:rgba(250,248,243,.97); border-bottom:1px solid var(--line); backdrop-filter:blur(16px); }
+.nav-inner { max-width:1320px; min-height:80px; padding:12px 40px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.journal-brand { display:flex; align-items:center; gap:13px; white-space:nowrap; }
+.brand-dot { width:21px; height:21px; border-radius:50%; background:var(--accent); }
+.brand-title { font-family:var(--serif); font-size:23px; font-weight:700; letter-spacing:.03em; }
+.brand-caption { display:block; font:10px/1.6 system-ui,sans-serif; letter-spacing:.19em; color:var(--muted); }
+.eyebrow { font:600 12px/1.6 system-ui,sans-serif; letter-spacing:.18em; color:var(--accent); text-transform:uppercase; }
+.gateway { max-width:1320px; margin:auto; padding:58px 40px 35px; display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:56px; align-items:center; }
+.gateway h1 { font-size:clamp(42px,4.6vw,68px); line-height:1.35; margin:18px 0 20px; font-weight:500; letter-spacing:.04em; }
+.gateway-description { color:var(--muted); font-size:16px; line-height:1.9; max-width:350px; }
+.journey-index { margin-top:25px; border-top:1px solid var(--line); }
+.journey-link { display:grid; grid-template-columns:44px 1fr 24px; gap:10px; align-items:center; border-bottom:1px solid var(--line); padding:19px 0; transition:padding .2s; }
+.journey-link:hover { padding-left:10px; }
+.journey-link .number { font-family:Georgia,serif; font-size:23px; color:var(--accent); }
+.journey-link strong { display:block; font-family:var(--serif); font-size:20px; font-weight:500; }
+.journey-link small { display:block; margin-top:5px; font-size:12px; color:var(--muted); letter-spacing:.06em; }
+.gateway-map { min-width:0; align-self:center; display:flex; flex-direction:column; background:#efeee6; padding:25px 18px 18px; position:relative; }
+.map-heading { padding:0 15px; display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:12px; color:var(--muted); }
+.gateway-map .rsm-svg { display:block; width:100%; height:auto; }
+.map-caption { margin:12px 15px 0; border-top:1px solid #d7d8ce; padding-top:15px; color:var(--muted); font-size:12px; }
+.journal-footer { max-width:1240px; margin:78px auto 0; padding:38px 40px; border-top:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; gap:30px; }
+.footer-author { display:flex; align-items:center; gap:18px; }
+.footer-author img { width:52px; height:52px; border-radius:50%; object-fit:cover; }
+.footer-author strong { font-family:var(--serif); font-weight:500; font-size:20px; }
+.footer-author p,.journal-footer small { font-size:12px; color:var(--muted); line-height:1.8; }
+.back-top { display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; width:42px; height:42px; flex-shrink:0; }
+@media(max-width:800px) {
+ .nav-inner { min-height:72px; padding:12px 24px; }
+ .gateway { padding:36px 24px; gap:24px; } .gateway h1 { font-size:44px; }
+}
+@media(max-width:640px) {
+ .nav-inner { min-height:68px; padding:10px 20px; } .brand-title { font-size:21px; } .brand-dot { width:17px; height:17px; }
+ .gateway { display:flex; flex-direction:column; align-items:stretch; padding:30px 20px; gap:28px; }
+ .gateway h1 { font-size:42px; margin:13px 0; } .gateway-description { max-width:none; } .gateway-map { padding:22px 6px; }
+ .gateway-map .rsm-svg { min-height:0; } .journey-link { padding:16px 0; } .journal-footer { margin-top:50px; padding:28px 22px; flex-wrap:wrap; gap:20px; }
+ .journal-footer>small { order:3; width:100%; } .footer-author { flex:1; } .footer-author img { width:44px; height:44px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important; transition:none!important; } }
+
+.page-shell { max-width:1160px; margin:0 auto; padding:56px 28px 0; }
+@media(max-width:640px) {
+ .page-shell { padding:32px 20px 0; }
+}
+.brand-title {font-size:28px;}
+.brand-caption {font-size:11px;}
+@media(max-width:700px){.brand-title{font-size:24px}}
